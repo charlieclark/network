@@ -7,7 +7,7 @@ function preloadClass(){
   var basePath = null;
 
   self.init = function(){
-    basePath = CONFIG.imagePath + "/";
+    basePath = CONFIG.imagePath;
   }
 
   self.loadGroupWithID = function(groupID , callback , returnType ){

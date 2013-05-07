@@ -5,10 +5,191 @@ a {
 }
 
 html,body{
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 3px;
 }
 
 #content{
+    padding-top: 96px;
+}
+
+img {
+    width: 100%;
+}
+.section {
+    padding-bottom: 70px;
+}
+
+.section-title {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 30px 0;
+    color: #cccbca;
+}
+
+.section-body {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    line-height: 21px;
+    color: #929292;
+}
+
+/*sections*/
+
+/*header*/
+
+.header-el {
+    display: inline-block;
+}
+.header-line {
+    width: 30px;
+    height: 3px;
+    background-color: #cccbca;
+    position: relative;
+    top: -4px;
+}
+#header {
+    position: fixed;
+    background-color: white;
+    color: #cccbca;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 40px 0;
+    top: 0;
+    z-index: 9999 !important;
+}
+
+#email {
+    cursor: pointer;
+}
+
+/*sub header*/
+#sub-header {
+}
+.logo-top {
+    max-width: 80%;
+    width: 140px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+/*content*/
+
+#main-content {
+    background: #202026;
+    color: #cccbca;
 }
 
 
-/*sections*/
+/*soundcloud*/
+.soundcloud-container {
+    width: 85%;
+    height: 167px;
+    margin: 0 auto 40px auto;
+    position: relative;
+    border-radius: 10px;
+}
+
+.soundcloud-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #878787;
+    top: 0;
+    border-radius: 4px;
+}
+
+.play-button {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    background: url("../img/play.png") no-repeat;
+    top: 50%;
+    left: 10%;
+    margin-top: -20px;
+    background-size: contain;
+}
+.lyric-container {
+    width: 80%;
+    text-align: center;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    margin-top: -22px;
+    margin-left: -40%;
+    position: absolute;
+    text-transform: uppercase;
+    line-height: 26px;
+    font-size: 0.8em;
+}
+
+/*footer*/
+#footer {
+    background: #202026;
+}
+
+.logo-container {
+    width: 100px;
+    display: inline-block;
+    margin-right: 20px;
+}
+.logo-container.logo-bottom2 {
+    position: relative;
+    top: -42px;
+}
+
+.footer-container {
+    padding: 42px 0 30px 0;
+    margin: auto;
+    text-align: center;
+}
+.logo-button {
+    display: inline-block;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    position: relative;
+    top: -47px;
+    cursor: pointer;
+}
+
+/*helpers*/
+.mouse-opacity:hover{
+	opacity: 0.6;
+	
+}
+
+.mouse-opacity{
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-ms-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+}
+
+/*gradients*/
+
+.gradient1{
+	background: #cccccc; /* Old browsers */
+background: -moz-linear-gradient(top,  #cccccc 0%, #d7bea1 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cccccc), color-stop(100%,#d7bea1)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #cccccc 0%,#d7bea1 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #cccccc 0%,#d7bea1 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #cccccc 0%,#d7bea1 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #cccccc 0%,#d7bea1 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#d7bea1',GradientType=0 ); /* IE6-9 */
+}
+
+.gradient2{
+	background: #494949; /* Old browsers */
+background: -moz-linear-gradient(top,  #494949 0%, #615349 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#494949), color-stop(100%,#615349)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #494949 0%,#615349 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #494949 0%,#615349 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #494949 0%,#615349 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #494949 0%,#615349 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#494949', endColorstr='#615349',GradientType=0 ); /* IE6-9 */
+
+}

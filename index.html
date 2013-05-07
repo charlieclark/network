@@ -25,6 +25,10 @@
 	<link rel="stylesheet" href="assets/css/style.css"/>
 	<link rel="stylesheet" href="assets/css/queries.css"/>
 	<link rel="stylesheet" href="assets/css/mobile.css"/>
+
+	<!-- fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
 	
 </head>
 
@@ -32,9 +36,9 @@
 
 	<div id="content">
 		<div id="header"></div>
-		<div id="sub-header"></div>
-		<div id="main-content"></div>
-		<div id="contract"></div>
+		<div id="sub-header" class="gradient1"></div>
+		<div id="main-content" class="section"></div>
+		<div id="contract" class="gradient2 section"></div>
 		<div id="footer"></div>
 	</div>
 
@@ -43,32 +47,46 @@
 
 	<!-- view templates -->
 	<script id="header-template" type="text/x-handlebars-template">
-			<div class="header-copy">{{header1}}</div>
-			<div class="header-line"></div>
-			<div class="header-copy">{{header2}}</div>
-			<div class="header-line"></div>
-			<div class="header-copy">{{header3}}</div>
+			<div class="header-el header-copy">{{header1}}</div>
+			<div class="header-el header-line"></div>
+			<div class="header-el header-copy">{{header2}}</div>
+			<div class="header-el header-line"></div>
+			<div id="email" class="header-el header-copy mouse-opacity">{{header3}}</div>
 	</script>
 
 	<script id="sub-header-template" type="text/x-handlebars-template">
+		<div class="logo-top"></div>
 	</script>
 
 	<script id="main-content-template" type="text/x-handlebars-template">
+		<div class="section-title">{{title}}</div>
+		{{#each tracks}}
+			<div class="soundcloud-container">
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%{{trackID}}&amp;color=dedede&amp;auto_play=false&amp;show_artwork=false"></iframe>
+
+					<div class="soundcloud-overlay">
+						<div class="lyric-container">{{{lyrics}}}</div>
+						<div class="play-button"></div>
+					</div>
+				</div>
+		{{/each}}
 	</script>
 
 	<script id="contract-template" type="text/x-handlebars-template">
+		<div class="section-title">{{title}}</div>
+		<div class="section-body">{{{body}}}</div>
 	</script>
 
 	<script id="footer-template" type="text/x-handlebars-template">
+		<div class="footer-container">
+			<div class="logo-container logo-bottom1"></div>
+			<div class="logo-container logo-bottom2"></div>
+			<div class="logo-button mouse-opacity">
+				<span>{{buttonCopy}}</span>
+			</div>
+		</div>
 	</script>
 
-
-	<script id="test-template" type="text/x-handlebars-template">
-			{{#each something}}
-			{{/each}}
-	</script>
-
-	
 
 
 </body>

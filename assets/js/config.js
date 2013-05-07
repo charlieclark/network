@@ -17,6 +17,7 @@ function configClass(){
 
 	self.assetPath = self.baseURL + "assets";
 	self.imagePath = self.assetPath + "/img/";
+	self.downloadPath = self.baseURL + "/downloads/";
 
 	//debug variables
 	self.mobileDebug = false;

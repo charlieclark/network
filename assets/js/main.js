@@ -23,10 +23,13 @@ function init(){
 
 	//mouseEvents
 	mouseEvents();
-	loadHandlers();
+
+	PRELOAD.loadGroupWithID("main-assets" , loadMainImages , "object" );
+	PRELOAD.loadGroupWithID("secondary-assets" , loadSecondaryImages , "object" );
 
 	//resize
 	$(window).resize();
+
 
 }
 
@@ -39,21 +42,15 @@ function renderLoop(){
 	//render classes here
 }
 
-function loadHandlers(){
-
-	 $(PRELOAD).on('group-finished' , function(event , data){
-
-	 	var tag = data.groupTag;
-	 	var elArray = data.elementArray;
-
-	 	if(tag == "firstAssets")
-	 	{
-	 		//do something here
-	 	}
-	 	
-	 });
+function loadMainImages(theImages) {
+	$(".logo-top").html( theImages["logo-top"] );
 }
 
+function loadSecondaryImages(theImages){
+	$(".logo-bottom1").html(theImages["logo-bottom1"])
+	$(".logo-bottom2").html(theImages["logo-bottom2"])
+
+}
 function mouseEvents(){
 
 	//global
@@ -61,6 +58,19 @@ function mouseEvents(){
 		CONFIG.mouseX = e.pageX;
 		CONFIG.mouseY = e.pageY;
 	});
+
+	//specific
+	$(".soundcloud-container").mouseover(function(){
+		$(this).find(".soundcloud-overlay").fadeOut(2000);
+	})
+
+	$("#email").click(function(){
+		window.open("mailto:WFCGREEN@GMAIL.COM");
+	})
+
+	$(".logo-button").click(function(){
+		window.open(CONFIG.downloadPath + "logos.zip");
+	})
 
 }
 
