@@ -2,6 +2,24 @@
 <head>
 	<title> Network </title>
 
+	<script>
+
+			
+
+			function promptPassword(msg)
+			{
+				var pw = prompt(  msg  );
+
+				if(pw != "synapse")
+				{
+					promptPassword("passwork incorrect, try again");
+				}
+			}
+
+			promptPassword("you need a password to enter the Network");
+
+	</script>
+
 	<!-- libraries -->
 	<script src="assets/js/libs/jquery.js"></script>
 	<script src="assets/js/libs/handlebars.js"></script>

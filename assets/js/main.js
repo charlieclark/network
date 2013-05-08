@@ -4,10 +4,13 @@ var curLayoutTag = null;
 
 
 $(document).ready(function(){
+	
 	init();
 });
 
 function init(){
+
+
 
 
 	//init preload
