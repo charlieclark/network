@@ -21,12 +21,12 @@ function configClass(){
 
 	//debug variables
 	self.mobileDebug = false;
+	self.isDev = false;
 
 
-	self.init = function(){
+	function init(){
 
 		
-
 		URLConditions();
 
 
@@ -35,12 +35,14 @@ function configClass(){
 	function URLConditions(){
 		var curURL = self.baseURL;
 
-		if( curURL.indexOf("charlieclark")>=0 )
+		if( curURL.indexOf("charlieclark")>=0 || curURL.indexOf("williamclark")>=0 )
 		{
-			
+			self.isDev = true;
 		}
 
 	}
+
+	init();
  
 }
  

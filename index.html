@@ -2,20 +2,36 @@
 <head>
 	<title> Network </title>
 
+	<script src="assets/js/config.js"></script>
+
 	<script>
 
+
+//               ___.         .___            .__                    
+// __  _  __ ____\_ |__     __| _/____   _____|__| ____   ____    /\ 
+// \ \/ \/ // __ \| __ \   / __ |/ __ \ /  ___/  |/ ___\ /    \   \/ 
+//  \     /\  ___/| \_\ \ / /_/ \  ___/ \___ \|  / /_/  >   |  \  /\ 
+//   \/\_/  \___  >___  / \____ |\___  >____  >__\___  /|___|  /  \/ 
+//              \/    \/       \/    \/     \/  /_____/      \/      
+//        .__                 .__  .__                .__                __    
+//   ____ |  |__ _____ _______|  | |__| ____     ____ |  | _____ _______|  | __
+// _/ ___\|  |  \\__  \\_  __ \  | |  |/ __ \  _/ ___\|  | \__  \\_  __ \  |/ /
+// \  \___|   Y  \/ __ \|  | \/  |_|  \  ___/  \  \___|  |__/ __ \|  | \/    < 
+//  \___  >___|  (____  /__|  |____/__|\___  >  \___  >____(____  /__|  |__|_ \
+//      \/     \/     \/                   \/       \/          \/           \/
 			
 
-			function promptPassword(msg)
+		function promptPassword(msg)
+		{
+			var pw = prompt(  msg  );
+
+			if(pw != "synapse")
 			{
-				var pw = prompt(  msg  );
-
-				if(pw != "synapse")
-				{
-					promptPassword("passwork incorrect, try again");
-				}
+				promptPassword("passwork incorrect, try again");
 			}
+		}
 
+		if(!CONFIG.isDev)
 			promptPassword("you need a password to enter the Network");
 
 	</script>
@@ -24,7 +40,7 @@
 	<script src="assets/js/libs/jquery.js"></script>
 	<script src="assets/js/libs/handlebars.js"></script>
 
-	<script src="assets/js/config.js"></script>
+	
 	<script src="assets/js/main.js"></script>
 
 	<!-- data -->
@@ -67,8 +83,8 @@
 	<script id="header-template" type="text/x-handlebars-template">
 			<div class="header-el header-copy">{{header1}}</div>
 			<div class="header-el header-line"></div>
-			<div class="header-el header-copy">{{header2}}</div>
-			<div class="header-el header-line"></div>
+			<div id ="phone" class="header-el header-copy">{{header2}}</div>
+			<div  class="header-el header-line"></div>
 			<div id="email" class="header-el header-copy mouse-opacity">{{header3}}</div>
 	</script>
 

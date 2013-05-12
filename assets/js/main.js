@@ -4,7 +4,7 @@ var curLayoutTag = null;
 
 
 $(document).ready(function(){
-	
+
 	init();
 });
 
@@ -18,7 +18,6 @@ function init(){
 
 	//initializing classes
 	TEMPLATE.init();
-	CONFIG.init();
 	LAYOUT.init();
 
 	//init render loop
@@ -68,13 +67,38 @@ function mouseEvents(){
 	})
 
 	$("#email").click(function(){
-		window.open("mailto:WFCGREEN@GMAIL.COM");
+		mail();
+	})
+
+	$("#phone").click(function(){
+		phone();
 	})
 
 	$(".logo-button").click(function(){
 		window.open(CONFIG.downloadPath + "logos.zip");
 	})
 
+}
+
+function mail(){
+
+	var sMailTo = "mailto:wfcgreen@gmail.com";
+	var subject = encodeURIComponent("hello");
+
+	var mailToS = sMailTo + "?subject=" + subject;
+	openPopup(mailToS);
+
+  function openPopup( url )
+  {
+      window.open( url , "_blank" ); 
+  }
+}
+
+function phone(){
+	if(DETECTION.isTouch())
+	{
+		window.open(  "tel://6479670986" , "_blank" ); 
+	}
 }
 
 //resize logic
